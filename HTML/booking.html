@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bo-Kaap Kombuis | Booking</title>
+
+    <!-- Connect CSS -->
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+
+<body>
+
+    <!-- Header and Navigation -->
+   <header>
+    <nav>
+
+        <img src="../Images/logo/logo.png"
+             alt="Bo-Kaap Kombuis Logo"
+             class="logo">
+
+        <h1>Bo-Kaap Kombuis</h1>
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="booking.html">Book / Enquiry</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Page Header -->
+        <section class="page-header">
+            <h2>Book / Make an Enquiry</h2>
+
+            <p>
+                Complete the form below to make a booking enquiry.
+            </p>
+        </section>
+
+
+        <!-- Booking Form -->
+        <section class="booking-section">
+
+            <h2>Booking Enquiry Form</h2>
+
+            <form id="bookingForm">
+
+                <!-- Full Name -->
+                <label for="name">Full Name:</label>
+
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Enter your full name"
+                    required
+                >
+
+
+                <!-- Email -->
+                <label for="email">Email Address:</label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email address"
+                    required
+                >
+
+
+                <!-- Phone -->
+                <label for="phone">Phone Number:</label>
+
+                <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="Enter your phone number"
+                    required
+                >
+
+
+                <!-- Booking Date -->
+                <label for="date">Booking Date:</label>
+
+                <input
+                    type="date"
+                    id="date"
+                    name="date"
+                    required
+                >
+
+
+                <!-- Number of Guests -->
+                <label for="guests">Number of Guests:</label>
+
+                <input
+                    type="number"
+                    id="guests"
+                    name="guests"
+                    min="1"
+                    placeholder="Number of guests"
+                    required
+                >
+
+
+                <!-- Additional Message -->
+                <label for="message">Additional Enquiry:</label>
+
+                <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    placeholder="Enter any additional information or requests"
+                ></textarea>
+
+
+                <!-- Submit Button -->
+                <button type="submit">
+                    Submit Enquiry
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>
+            &copy; 2026 Bo-Kaap Kombuis. All rights reserved.
+        </p>
+    </footer>
+
+
+    <!-- Connect JavaScript -->
+    <script src="../JS/script.js"></script>
+
+</body>
+
+</html>

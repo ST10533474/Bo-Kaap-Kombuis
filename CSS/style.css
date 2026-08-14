@@ -1,0 +1,254 @@
+/* ==============================
+   GENERAL STYLES
+   ============================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f5efe6;
+    color: #222;
+}
+
+h1,
+h2,
+h3 {
+    font-family: Georgia, serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* ==============================
+   HEADER AND NAVIGATION
+   ============================== */
+
+header {
+    background-color: #17233c;
+    color: white;
+    padding: 20px;
+}
+
+nav {
+    max-width: 1200px;
+    margin: auto;
+}
+
+nav h1 {
+    margin: 0 0 15px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    color: white;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #d4af37;
+}
+
+
+/* ==============================
+   HERO SECTION
+   ============================== */
+
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background-color: #8b1e2d;
+    color: white;
+}
+
+.hero h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    max-width: 700px;
+    margin: 0 auto 30px;
+    font-size: 18px;
+}
+
+
+/* ==============================
+   GENERAL SECTIONS
+   ============================== */
+
+.intro,
+.about-preview,
+.content-section,
+.menu-section,
+.booking-section,
+.contact-section {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.page-header {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #d4af37;
+    color: #17233c;
+}
+
+
+/* ==============================
+   BUTTONS
+   ============================== */
+
+.button,
+button {
+    display: inline-block;
+    padding: 12px 22px;
+    margin: 10px 5px;
+    background-color: #8b1e2d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button:hover,
+button:hover {
+    background-color: #17233c;
+}
+
+
+/* ==============================
+   MENU
+   ============================== */
+
+.menu-item {
+    border-bottom: 1px solid #ddd;
+    padding: 20px 0;
+}
+
+.menu-item:last-child {
+    border-bottom: none;
+}
+
+
+/* ==============================
+   GALLERY
+   ============================== */
+
+.gallery {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.gallery-item {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+
+/* ==============================
+   BOOKING FORM
+   ============================== */
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+input,
+textarea {
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+
+/* ==============================
+   FOOTER
+   ============================== */
+
+footer {
+    background-color: #17233c;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 50px;
+}
+
+
+/* ==============================
+   RESPONSIVE DESIGN
+   ============================== */
+
+@media (max-width: 768px) {
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero h2 {
+        font-size: 32px;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .intro,
+    .about-preview,
+    .content-section,
+    .menu-section,
+    .booking-section,
+    .contact-section {
+        margin: 20px;
+    }
+/* Logo */
+.logo {
+    width: 50px;
+    height: auto;
+}
+}
