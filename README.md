@@ -161,9 +161,8 @@ Bo-Kaap-Kombuis/
 │   └── restuarant/
 │
 └── README.md
-<<<<<<< HEAD
-=======
 
+```markdown
 ## Changelog
 
 ### Part 2 – CSS Styling and Responsive Design
@@ -179,5 +178,32 @@ Bo-Kaap-Kombuis/
 - Added responsive image sizing for different screen sizes.
 - Improved booking and contact form styling.
 - Added mobile and tablet breakpoints to improve usability on smaller devices.
-- Tested the website across desktop and smaller screen sizes to ensure content remains readable and usable.
->>>>>>> a24ba7e (Improve CSS styling and responsive design)
+- Tested the website across desktop, tablet and mobile screen sizes using browser developer tools.
+- Added desktop, tablet and mobile screenshot evidence to document responsive testing.
+
+## Responsive Design Evidence
+
+The website was tested at desktop, tablet and mobile screen sizes using browser developer tools. The layout, navigation, images, text and content were checked to ensure that the website remains readable and usable across different screen sizes.
+
+### Desktop View
+
+![Desktop view of Bo-Kaap Kombuis website](Screenshots/desktop.png)
+
+### Tablet View
+
+![Tablet view of Bo-Kaap Kombuis website](Screenshots/tablet.png)
+
+### Mobile View
+
+![Mobile view of Bo-Kaap Kombuis website](Screenshots/mobile.png)
+
+## References
+
+Mozilla Developer Network (MDN) (2026) *Responsive web design*. Available at: https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design (Accessed: 17 September 2026).
+
+Mozilla Developer Network (MDN) (2026) *Using responsive images in HTML*. Available at: https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Responsive_images (Accessed: 17 September 2026).
+
+Mozilla Developer Network (MDN) (2026) *Media query fundamentals*. Available at: https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Media_queries (Accessed: 17 September 2026).
+
+Mozilla Developer Network (MDN) (2026) *CSS flexible box layout*. Available at: https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Flexible_box_layout (Accessed: 17 September 2026).
+```
