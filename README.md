@@ -2,7 +2,8 @@
 
 ## Student Information
 
-**Student Number:** ST10533474 Nelly Mgijima  
+**Student Number:** ST10533474 
+**Student Name:** Nelly Mgijima  
 **Project:** Bo-Kaap Kombuis Website  
 **Course:** Web Development  
 **Project Type:** Restaurant Website  
