@@ -3,10 +3,15 @@
 ## Student Information
 
 **Student Number:** ST10533474 
-**Student Name:** Nelly Mgijima  
-**Project:** Bo-Kaap Kombuis Website  
-**Course:** Web Development  
-**Project Type:** Restaurant Website  
+
+**Student Name:** Nelly Mgijima
+
+**Project:** Bo-Kaap Kombuis Website
+
+**Course:** Web Development
+
+**Project Type:** Restaurant Website
+
 **Development Tools:** Visual Studio Code, Git and GitHub
 
 ---
@@ -156,3 +161,23 @@ Bo-Kaap-Kombuis/
 │   └── restuarant/
 │
 └── README.md
+<<<<<<< HEAD
+=======
+
+## Changelog
+
+### Part 2 – CSS Styling and Responsive Design
+
+- Improved the overall website styling using an external CSS stylesheet.
+- Updated the homepage hero section with a Cape Malay food image and improved text readability.
+- Improved the navigation layout, spacing and hover effects.
+- Added responsive navigation for smaller screen sizes.
+- Improved button styling and interactive hover effects.
+- Added focus styling for form fields and navigation links.
+- Improved the layout and appearance of content sections using spacing, borders and shadows.
+- Improved the gallery layout with responsive grid columns.
+- Added responsive image sizing for different screen sizes.
+- Improved booking and contact form styling.
+- Added mobile and tablet breakpoints to improve usability on smaller devices.
+- Tested the website across desktop and smaller screen sizes to ensure content remains readable and usable.
+>>>>>>> a24ba7e (Improve CSS styling and responsive design)
