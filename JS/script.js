@@ -158,20 +158,62 @@ if (galleryImages.length > 0) {
     });
 }
 
-// MENU CATEGORY FILTER
+
+// MENU CATEGORY FILTER AND SEARCH
 
 const filterButtons = document.querySelectorAll(".filter-button");
 const menuItems = document.querySelectorAll(".menu-item[data-category]");
 const menuEmpty = document.getElementById("menu-empty");
+const menuSearch = document.getElementById("menuSearch");
+const menuSearchStatus = document.getElementById("menuSearchStatus");
 
 if (filterButtons.length > 0 && menuItems.length > 0) {
 
+    let selectedCategory = "all";
+
+    function filterMenu() {
+        const searchTerm = menuSearch
+            ? menuSearch.value.trim().toLowerCase()
+            : "";
+
+        let visibleItems = 0;
+
+        menuItems.forEach(function (item) {
+            const category = item.dataset.category;
+            const name = item.querySelector("h3")?.textContent.toLowerCase() || "";
+            const description = item.querySelector("p")?.textContent.toLowerCase() || "";
+
+            const matchesCategory =
+                selectedCategory === "all" ||
+                category === selectedCategory;
+
+            const matchesSearch =
+                name.includes(searchTerm) ||
+                description.includes(searchTerm);
+
+            if (matchesCategory && matchesSearch) {
+                item.hidden = false;
+                visibleItems++;
+            } else {
+                item.hidden = true;
+            }
+        });
+
+        if (menuEmpty) {
+            menuEmpty.hidden = visibleItems > 0;
+        }
+
+        if (menuSearchStatus) {
+            menuSearchStatus.textContent =
+                visibleItems + (visibleItems === 1
+                    ? " menu item found."
+                    : " menu items found.");
+        }
+    }
+
     filterButtons.forEach(function (button) {
-
         button.addEventListener("click", function () {
-
-            const selectedCategory = button.dataset.filter;
-            let visibleItems = 0;
+            selectedCategory = button.dataset.filter;
 
             filterButtons.forEach(function (filterButton) {
                 filterButton.classList.remove("active");
@@ -181,31 +223,17 @@ if (filterButtons.length > 0 && menuItems.length > 0) {
             button.classList.add("active");
             button.setAttribute("aria-pressed", "true");
 
-            menuItems.forEach(function (item) {
-
-                const category = item.dataset.category;
-
-                if (
-                    selectedCategory === "all" ||
-                    category === selectedCategory
-                ) {
-                    item.hidden = false;
-                    visibleItems++;
-                } else {
-                    item.hidden = true;
-                }
-
-            });
-
-            if (menuEmpty) {
-                menuEmpty.hidden = visibleItems > 0;
-            }
-
+            filterMenu();
         });
-
     });
 
+    if (menuSearch) {
+        menuSearch.addEventListener("input", filterMenu);
+    }
+
+    filterMenu();
 }
+
 
 // MOBILE NAVIGATION
 
@@ -215,7 +243,6 @@ const mainNavigation = document.getElementById("main-navigation");
 if (menuToggle && mainNavigation) {
 
     menuToggle.addEventListener("click", function () {
-
         const isOpen = mainNavigation.classList.toggle("open");
 
         menuToggle.textContent = isOpen ? "✕" : "☰";
@@ -229,13 +256,11 @@ if (menuToggle && mainNavigation) {
     });
 
     mainNavigation.querySelectorAll("a").forEach(function (link) {
-
         link.addEventListener("click", function () {
             mainNavigation.classList.remove("open");
             menuToggle.textContent = "☰";
             menuToggle.setAttribute("aria-expanded", "false");
             menuToggle.setAttribute("aria-label", "Open navigation menu");
         });
-
     });
 }

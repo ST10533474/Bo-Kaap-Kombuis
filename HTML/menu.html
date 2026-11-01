@@ -59,6 +59,17 @@
 <section class="menu-section">
     <h2>Food and Drinks</h2>
 
+    <div class="menu-search">
+    <label for="menuSearch">Search the menu:</label>
+    <input
+        type="search"
+        id="menuSearch"
+        placeholder="Search for a dish or category..."
+        aria-describedby="menuSearchStatus"
+    >
+    <p id="menuSearchStatus" aria-live="polite"></p>
+</div> 
+
     <div class="menu-filters" aria-label="Filter menu categories">
         <button type="button" class="filter-button active" data-filter="all" aria-pressed="true">All</button>
         <button type="button" class="filter-button" data-filter="dishes" aria-pressed="false">Cape Malay Dishes</button>
