@@ -1,90 +1,182 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bo-Kaap Kombuis | Menu</title>
-    <link rel="stylesheet" href="../CSS/style.css">
+
+<meta name="description" content="Explore traditional Cape Malay dishes, curries, desserts, drinks and side dishes at Bo-Kaap Kombuis in Cape Town.">
+<meta name="keywords" content="Bo-Kaap Kombuis menu, Cape Malay dishes, Cape Town restaurant, curries, desserts">
+
+<title>Menu | Bo-Kaap Kombuis</title>
+
+<link rel="stylesheet" href="../CSS/style.css">
+
+
 </head>
 
 <body>
 
-    <!-- Header and Navigation -->
-    <header>
+<header>
     <nav>
+        <img src="../Images/logo/logo.webp"
+     alt="Bo-Kaap Kombuis Logo"
+     class="logo">
 
-        <img src="../Images/logo/logo.png"
-             alt="Bo-Kaap Kombuis Logo"
-             class="logo">
+    <h1>Bo-Kaap Kombuis</h1>
 
-        <h1>Bo-Kaap Kombuis</h1>
+    <button class="menu-toggle"
+            id="menu-toggle"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="main-navigation">
+        ☰
+    </button>
 
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="menu.html">Menu</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="booking.html">Book / Enquiry</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <ul id="main-navigation">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="menu.html" aria-current="page">Menu</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="booking.html">Reservations</a></li>
+        <li><a href="enquiry.html">Enquiry</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
 
-    <main>
+</header>
 
-        <section class="page-header">
-            <h2>Our Menu</h2>
-            <p>Explore our Cape Malay food and dining options.</p>
-        </section>
+<main>
 
-        <section class="menu-section">
 
-            <h2>Food and Drinks</h2>
+<section class="page-header">
+    <h2>Our Menu</h2>
+    <p>Discover the flavours of traditional Cape Malay cuisine.</p>
+</section>
 
-            <div class="menu-item">
-                <h3>Cape Malay Dishes</h3>
-                <p>
-                    Traditional Cape Malay dishes prepared with aromatic
-                    spices and cultural influences.
-                </p>
-            </div>
+<section class="menu-section">
+    <h2>Food and Drinks</h2>
 
-            <div class="menu-item">
-                <h3>Curries</h3>
-                <p>
-                    Flavourful curry dishes inspired by Cape Malay cooking
-                    traditions.
-                </p>
-            </div>
+    <div class="menu-filters" aria-label="Filter menu categories">
+        <button type="button" class="filter-button active" data-filter="all" aria-pressed="true">All</button>
+        <button type="button" class="filter-button" data-filter="dishes" aria-pressed="false">Cape Malay Dishes</button>
+        <button type="button" class="filter-button" data-filter="curries" aria-pressed="false">Curries</button>
+        <button type="button" class="filter-button" data-filter="sides" aria-pressed="false">Rice and Sides</button>
+        <button type="button" class="filter-button" data-filter="desserts" aria-pressed="false">Desserts</button>
+        <button type="button" class="filter-button" data-filter="drinks" aria-pressed="false">Drinks</button>
+    </div>
 
-            <div class="menu-item">
-                <h3>Rice and Side Dishes</h3>
-                <p>
-                    A selection of traditional rice dishes and accompaniments.
-                </p>
-            </div>
+    <div class="menu-results">
 
-            <div class="menu-item">
-                <h3>Desserts</h3>
-                <p>
-                    Traditional sweet treats and desserts.
-                </p>
-            </div>
+        <div class="menu-item" data-category="dishes">
+            <img src="../Images/food/capemalaydishes1.jpg" alt="Traditional Cape Malay dish" loading="lazy">
+            <h3>Cape Malay Dishes</h3>
+            <p>Traditional Cape Malay flavours prepared with aromatic spices.</p>
+        </div>
 
-            <div class="menu-item">
-                <h3>Drinks</h3>
-                <p>
-                    A selection of drinks to accompany your meal.
-                </p>
-            </div>
+        <div class="menu-item" data-category="dishes">
+            <img src="../Images/food/capemalaydishes2.jpg" alt="Cape Malay cuisine selection" loading="lazy">
+            <h3>Cape Malay Dishes</h3>
+            <p>Enjoy the rich flavours and cultural heritage of Cape Malay cooking.</p>
+        </div>
 
-        </section>
+        <div class="menu-item" data-category="dishes">
+            <img src="../Images/food/capemalaydishes3.jpg" alt="Traditional Cape Malay food" loading="lazy">
+            <h3>Cape Malay Dishes</h3>
+            <p>A delicious selection inspired by traditional family recipes.</p>
+        </div>
 
-    </main>
+        <div class="menu-item" data-category="curries">
+            <img src="../Images/food/curry1.jpg" alt="Cape Malay curry" loading="lazy">
+            <h3>Curries</h3>
+            <p>Flavourful curries inspired by traditional Cape Malay cooking.</p>
+        </div>
 
-    <footer>
-        <p>&copy; 2026 Bo-Kaap Kombuis. All rights reserved.</p>
-    </footer>
+        <div class="menu-item" data-category="curries">
+            <img src="../Images/food/curry2.jpg" alt="Traditional curry dish" loading="lazy">
+            <h3>Curries</h3>
+            <p>Rich spices and delicious flavours in every dish.</p>
+        </div>
+
+        <div class="menu-item" data-category="curries">
+            <img src="../Images/food/curry3.jpg" alt="Cape Malay curry selection" loading="lazy">
+            <h3>Curries</h3>
+            <p>Experience the warmth of traditional Cape Malay curries.</p>
+        </div>
+
+        <div class="menu-item" data-category="sides">
+            <img src="../Images/food/riceandsides1.jpg" alt="Rice and side dishes" loading="lazy">
+            <h3>Rice and Side Dishes</h3>
+            <p>Delicious accompaniments to complete your meal.</p>
+        </div>
+
+        <div class="menu-item" data-category="sides">
+            <img src="../Images/food/riceandsides2.jpg" alt="Traditional rice dish" loading="lazy">
+            <h3>Rice and Side Dishes</h3>
+            <p>A selection of traditional rice dishes and sides.</p>
+        </div>
+
+        <div class="menu-item" data-category="sides">
+            <img src="../Images/food/riceandsides3.jpg" alt="Rice and food accompaniments" loading="lazy">
+            <h3>Rice and Side Dishes</h3>
+            <p>Perfect accompaniments to your favourite dishes.</p>
+        </div>
+
+        <div class="menu-item" data-category="desserts">
+            <img src="../Images/food/dessert1.jpg" alt="Traditional Cape Malay dessert" loading="lazy">
+            <h3>Desserts</h3>
+            <p>Sweet treats inspired by traditional Cape Malay recipes.</p>
+        </div>
+
+        <div class="menu-item" data-category="desserts">
+            <img src="../Images/food/dessert2.jpg" alt="Delicious dessert selection" loading="lazy">
+            <h3>Desserts</h3>
+            <p>Finish your meal with something sweet and delicious.</p>
+        </div>
+
+        <div class="menu-item" data-category="desserts">
+            <img src="../Images/food/dessert3.jpg" alt="Traditional sweet dessert" loading="lazy">
+            <h3>Desserts</h3>
+            <p>Enjoy a taste of traditional Cape Malay sweetness.</p>
+        </div>
+
+        <div class="menu-item" data-category="drinks">
+            <img src="../Images/food/drinks1.webp" alt="Refreshing drink" loading="lazy">
+            <h3>Drinks</h3>
+            <p>Refreshing drinks to accompany your meal.</p>
+        </div>
+
+        <div class="menu-item" data-category="drinks">
+            <img src="../Images/food/drinks2.jpg" alt="Drink selection" loading="lazy">
+            <h3>Drinks</h3>
+            <p>Choose a refreshing drink to enjoy with your food.</p>
+        </div>
+
+        <div class="menu-item" data-category="drinks">
+            <img src="../Images/food/drinks3.webp" alt="Refreshing beverage" loading="lazy">
+            <h3>Drinks</h3>
+            <p>Complete your dining experience with a delicious drink.</p>
+        </div>
+
+        <div class="menu-category-note">
+            <p>All our drinks are non-alcoholic.</p>
+        </div>
+
+    </div>
+
+    <p id="menu-empty" hidden>No menu categories found.</p>
+</section>
+
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Bo-Kaap Kombuis. All rights reserved.</p>
+</footer>
+
+<script src="../JS/script.js"></script>
 
 </body>
 </html>

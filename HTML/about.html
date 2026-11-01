@@ -1,74 +1,92 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bo-Kaap Kombuis | About Us</title>
-    <link rel="stylesheet" href="../CSS/style.css">
+
+<meta name="description" content="Learn about Bo-Kaap Kombuis, its Cape Malay cuisine and the cultural heritage of the historic Bo-Kaap in Cape Town.">
+<meta name="keywords" content="Bo-Kaap Kombuis, about us, Cape Malay culture, Bo-Kaap heritage, Cape Town restaurant">
+
+<title>About Us | Bo-Kaap Kombuis</title>
+
+<link rel="stylesheet" href="../CSS/style.css">
+
 </head>
 
 <body>
 
-    <!-- Header and Navigation -->
-    <header>
+<header>
     <nav>
-
-        <img src="../Images/logo/logo.png"
-             alt="Bo-Kaap Kombuis Logo"
-             class="logo">
+        <img src="../Images/logo/logo.webp"
+     alt="Bo-Kaap Kombuis Logo"
+     class="logo">
 
         <h1>Bo-Kaap Kombuis</h1>
 
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="menu.html">Menu</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="booking.html">Book / Enquiry</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+        <button class="menu-toggle"
+                id="menu-toggle"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="main-navigation">
+            ☰
+        </button>
 
-    <main>
+        <ul id="main-navigation">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" aria-current="page">About Us</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="booking.html">Reservations</a></li>
+            <li><a href="enquiry.html">Enquiry</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
 
-        <section class="page-header">
-            <h2>About Bo-Kaap Kombuis</h2>
-            <p>Discover our story and cultural heritage.</p>
-        </section>
+<main>
 
-        <section class="content-section">
-            <h2>Our Story</h2>
+    <section class="page-header">
+        <h2>About Bo-Kaap Kombuis</h2>
+        <p>Discover our story and cultural heritage.</p>
+    </section>
 
-            <p>
-                Bo-Kaap Kombuis is a restaurant located in the historic
-                Bo-Kaap area of Cape Town. The restaurant celebrates
-                Cape Malay cuisine and the cultural heritage of the area.
-            </p>
+    <section class="content-section">
+        <h2>Our Story</h2>
 
-            <p>
-                The restaurant provides visitors with an opportunity to
-                experience traditional flavours while learning more about
-                the cultural traditions associated with Cape Malay cooking.
-            </p>
-        </section>
+        <p>
+            Bo-Kaap Kombuis is a restaurant located in the historic
+            Bo-Kaap area of Cape Town. The restaurant celebrates
+            Cape Malay cuisine and the cultural heritage of the area.
+        </p>
 
-        <section class="content-section">
-            <h2>Our Culture</h2>
+        <p>
+            The restaurant provides visitors with an opportunity to
+            experience traditional flavours while learning more about
+            the cultural traditions associated with Cape Malay cooking.
+        </p>
+    </section>
 
-            <p>
-                Food is an important part of Cape Malay culture. Traditional
-                spices, cooking methods and recipes have been passed down
-                through generations and continue to form an important part
-                of the Bo-Kaap's identity.
-            </p>
-        </section>
+    <section class="content-section">
+        <h2>Our Culture</h2>
 
-    </main>
+        <p>
+            Food is an important part of Cape Malay culture. Traditional
+            spices, cooking methods and recipes have been passed down
+            through generations and continue to form an important part
+            of the Bo-Kaap's identity.
+        </p>
+    </section>
 
-    <footer>
-        <p>&copy; 2026 Bo-Kaap Kombuis. All rights reserved.</p>
-    </footer>
+</main>
+
+<footer>
+    <p>&copy; 2026 Bo-Kaap Kombuis. All rights reserved.</p>
+</footer>
+
+<script src="../JS/script.js"></script>
 
 </body>
 </html>

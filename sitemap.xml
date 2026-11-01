@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+<url>
+    <loc>YOUR_WEBSITE_URL/HTML/index.html</loc>
+</url>
+
+<url>
+    <loc>YOUR_WEBSITE_URL/HTML/about.html</loc>
+</url>
+
+<url>
+    <loc>YOUR_WEBSITE_URL/HTML/menu.html</loc>
+</url>
+
+<url>
+    <loc>YOUR_WEBSITE_URL/HTML/gallery.html</loc>
+</url>
+
+<url>
+    <loc>YOUR_WEBSITE_URL/HTML/booking.html</loc>
+</url>
+
+<url>
+    <loc>YOUR_WEBSITE_URL/HTML/enquiry.html</loc>
+</url>
+
+<url>
+    <loc>YOUR_WEBSITE_URL/HTML/contact.html</loc>
+</url>
+
+</urlset>
