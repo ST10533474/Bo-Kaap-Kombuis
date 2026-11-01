@@ -207,6 +207,19 @@ Bo-Kaap-Kombuis/
 * Improved image descriptions through descriptive alternative text.
 * Created a `robots.txt` file.
 * Created a `sitemap.xml` file to list the website pages.
+### Enhancing Functionality and SEO
+
+* Implemented JavaScript interactivity to improve the website's functionality and user experience.
+* Added dynamic menu search and category filtering.
+* Implemented a gallery lightbox with image navigation.
+* Added form validation to the booking, enquiry and contact forms.
+* Integrated Netlify Forms with AJAX submission for the enquiry and contact forms.
+* Enabled Netlify form detection and confirmed that both forms successfully receive test submissions.
+* Improved search engine optimisation through page titles, meta descriptions, heading structure, descriptive image names and alternative text.
+* Added and updated `robots.txt` and `sitemap.xml`.
+* Deployed the website using Netlify.
+* Tested the website's functionality and responsiveness on the live deployment.
+
 
 ## Responsive Design Evidence
 
