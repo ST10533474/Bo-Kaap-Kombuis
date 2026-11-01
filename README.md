@@ -136,8 +136,7 @@ GitHub is used to store the project repository remotely and provide version cont
 
 ## Project Structure
 
-The project is organised into the following folders and files:
-
+```text
 Bo-Kaap-Kombuis/
 │
 ├── HTML/
@@ -166,6 +165,8 @@ Bo-Kaap-Kombuis/
 ├── README.md
 ├── robots.txt
 └── sitemap.xml
+```
+
 
 
 ## Changelog
