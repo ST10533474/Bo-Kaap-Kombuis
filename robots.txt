@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://timely-croquembouche-449dde.netlify.app/sitemap.xml
