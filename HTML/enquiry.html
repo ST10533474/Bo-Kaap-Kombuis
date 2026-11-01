@@ -61,7 +61,23 @@
 
         <h2>Restaurant Enquiry Form</h2>
 
-        <form id="enquiryForm">
+        <form
+            id="enquiryForm"
+            name="enquiry"
+            method="POST"
+            action="/HTML/enquiry.html"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+        >
+
+            <input type="hidden" name="form-name" value="enquiry">
+
+            <p hidden>
+                <label>
+                    Don't fill this out:
+                    <input name="bot-field">
+                </label>
+            </p>
 
             <label for="enquiryName">Full Name:</label>
             <input
@@ -90,18 +106,14 @@
                 name="phone"
                 placeholder="e.g. 082 123 4567"
                 pattern="(?:\+27|0)(?:\s?\d){9}"
-                title="Enter a valid South African phone number, for example 082 123 4567 or +27 82 123 4567."
+                title="Enter a valid South African phone number."
                 autocomplete="tel"
                 inputmode="tel"
                 required
             >
 
             <label for="enquiryType">Enquiry Category:</label>
-            <select
-                id="enquiryType"
-                name="enquiryType"
-                required
-            >
+            <select id="enquiryType" name="enquiryType" required>
                 <option value="">Select an enquiry category</option>
                 <option value="Menu and Food">Menu and Food</option>
                 <option value="Food Availability">Food Availability</option>
@@ -129,9 +141,7 @@
                 required
             ></textarea>
 
-            <button type="submit">
-                Submit Enquiry
-            </button>
+            <button type="submit">Submit Enquiry</button>
 
         </form>
 
@@ -154,8 +164,9 @@
 
 <script>
     const enquiryForm = document.getElementById("enquiryForm");
+    const enquiryResponse = document.getElementById("enquiryResponse");
 
-    enquiryForm.addEventListener("submit", function (event) {
+    enquiryForm.addEventListener("submit", async function (event) {
         event.preventDefault();
 
         if (!enquiryForm.checkValidity()) {
@@ -163,33 +174,34 @@
             return;
         }
 
-        const name = document.getElementById("enquiryName").value.trim();
-        const email = document.getElementById("enquiryEmail").value.trim();
-        const phone = document.getElementById("enquiryPhone").value.trim();
-        const type = document.getElementById("enquiryType").value;
-        const subjectText = document.getElementById("enquirySubject").value.trim();
-        const details = document.getElementById("enquiryDetails").value.trim();
+        enquiryResponse.textContent = "Submitting your enquiry...";
 
-        const subject = encodeURIComponent(
-            "Website Enquiry - " + subjectText
+        const formData = new URLSearchParams(
+            new FormData(enquiryForm)
         );
 
-        const body = encodeURIComponent(
-            "New Restaurant Enquiry\n\n" +
-            "Full Name: " + name + "\n" +
-            "Email Address: " + email + "\n" +
-            "Phone Number: " + phone + "\n" +
-            "Enquiry Category: " + type + "\n" +
-            "Subject: " + subjectText + "\n\n" +
-            "Enquiry Details:\n" + details
-        );
+        try {
+            const response = await fetch(enquiryForm.action, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/x-www-form-urlencoded"
+                },
+                body: formData.toString()
+            });
 
-        document.getElementById("enquiryResponse").textContent =
-            "Your email application will open with your enquiry ready to send.";
+            if (!response.ok) {
+                throw new Error("Submission failed");
+            }
 
-        window.location.href =
-            "mailto:nazli@bokaapkombuis.co.za?subject=" +
-            subject + "&body=" + body;
+            enquiryResponse.textContent =
+                "Thank you! Your enquiry has been submitted successfully. Our team will review it and respond using your contact details. Please note that submitting an enquiry does not confirm a reservation or guarantee availability.";
+
+            enquiryForm.reset();
+
+        } catch (error) {
+            enquiryResponse.textContent =
+                "Sorry, your enquiry could not be submitted. Please try again later.";
+        }
     });
 </script>
 
